@@ -24,6 +24,10 @@ router.post("/notes", (req, res) =>{
     });
 });
 
-//res.end();
+// router.delete('/notes/:id', (req, res) => {
+
+// });
+
+
 
 module.exports = router;
