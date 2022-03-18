@@ -148,7 +148,7 @@ const renderNoteList = async (notes) => {
       );
       delBtnEl.addEventListener('click', handleNoteDelete);
 
-      liEl.append(delBtnEl);
+      liEl.append(delBtnEl); //so trashcan ends up on the end
     }
 
     return liEl;
@@ -159,7 +159,8 @@ const renderNoteList = async (notes) => {
   }
 
   jsonNotes.forEach((note) => {
-    const li = createLi(note.title);
+    const li = createLi(note.title); //text is note.title
+    //if there wasn't a return statement from createLi wouldn't avle to use data
     li.dataset.note = JSON.stringify(note);
 
     noteListItems.push(li);
